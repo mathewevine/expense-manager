@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: #8ecae6;
+    display: flex;
+    justify-content: center;
+}
+
+.main-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 95%;
+    width: 80%;
+    overflow: hidden;
+}
+
+.header {
+    width: 100%;
+    background-image: url(./images/money-manager-bg.png);
+    height: 120px;
+    padding: 10px;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.balance {
+    background-color: #219ebc;
+    width: 30%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.income {
+    background-color: #023047;
+    color: white;
+    width: 32%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.expense {
+    background-color: #ffb703;
+    width: 32%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.transaction-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.transaction {
+    width: 28%;
+    border: 1px solid #bc4749;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.transaction h1 {
+    font-size: 24px;
+}
+
+.transaction input, .transaction select {
+    background-color: transparent;
+    border: 1px solid #bc4749;
+    width: 70%;
+    height: 24px;
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: blue;
+    color: white;
+    width: 70%;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+}
+
+.history {
+    width: 62%;
+    border: 1px solid #bc4749;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.history h1 {
+    font-size: 24px;
+}
+
+.history-head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+/* table {
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 10px; Adjust as needed 
+}
+
+th{
+    border: 1px solid rgb(215, 6, 6);
+    text-align: left;
+    padding: 8px;
+    background-color: transparent;
+    padding-right: 165px;
+}
+
+tr {
+    width: 100%;
+}
+
+td {
+  width: 50px;  
+} */
+
+.history-sec {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+
+.img {
+    width: 50px;
+    height: 50px;
+}
+

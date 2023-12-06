@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"/>
+    <title>Expense Manager</title>
+</head>
+<body>
+    <div class="main-bg">
+        <div class="header">
+            <h1>Hi, Ramesh</h1>
+            <p>Welcome back to your Zigma's Expense Manager</p>
+        </div>
+        <div class="details-container">
+            <div class="balance">
+                <img src="./images/balance-image.png" alt="balance" class="img"/>
+                <div>
+                    <p>Your Balance</p>
+                    <p id="balance-text">Rs 0</p>
+                </div>
+            </div>
+            <div class="income">
+                <img src="./images/income-image.png" alt="balance" class="img"/>
+                <div>
+                    <p>Your Income</p>
+                    <p id="income-text">Rs 0</p>
+                </div>
+            </div>
+            <div class="expense">
+                <img src="./images/expenses-image.png" alt="balance" class="img"/>
+                <div>
+                    <p>Your Expenses</p>
+                    <p id="expense-text">Rs 0</p>
+                </div>
+            </div>
+        </div>
+        <div class="transaction-container">
+            <div class="transaction">
+                <h1>Add Transaction</h1>
+                <form>
+                    <label for="title">Title</label><br/>
+                    <input type="text" id="title" name="title"/><br/>
+                    <label for="amount">Amount</label><br/>
+                    <input type="text" id="amount" name="amount"/><br/>
+                    <label for="title">Type</label><br/>
+                    <select name="type" id="type">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select><br/>
+                    <button type="submit" id="submit-btn" class="submit-btn">Add</button>
+                </form>
+            </div>
+            <div class="history" id="history-container">
+                <h1>History</h1>
+                <div class="history-head">
+                    <p>TITLE</p>
+                    <p>AMOUNT</p>
+                    <p>TYPE</p>
+                </div>
+                <hr/>
+                <div id="history-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
