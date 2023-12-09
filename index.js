@@ -48,10 +48,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //APIs
-app.get('/', (req, res)=> {
-    res.sendFile(path.join(__dirname, './files/index.html'));
-})
-
 app.post('/submit', async (req, res) => {
     // Accessing form data from req.body
     const { title, amount, type } = req.body;

@@ -32,15 +32,16 @@ submitBtn.addEventListener('click', async (event)=> {
         }
         
         const {incomes, expenses, transactionArray} = await response.json();
-        console.log(transactionArray);
-        if (incomes) {
-            incomeText.textContent = incomes[0].totalIncome;
+        
+        if (incomes && incomes.length > 0) {
+            incomeText.textContent = incomes[0].totalIncome || 0;
         }
 
-        if (expenses) {
-            expenseText.textContent = expenses[0].totalExpense;
+        if (expenses && expenses.length > 0) {
+            expenseText.textContent = expenses[0].totalExpense || 0;
         }
-        const balance = Number(incomes[0].totalIncome) - Number(expenses[0].totalExpense);
+
+        const balance = (incomes[0]?.totalIncome || 0) - (expenses[0]?.totalExpense || 0);
         balanceText.textContent = balance;
 
         historyContainer.textContent = "";
@@ -62,6 +63,9 @@ submitBtn.addEventListener('click', async (event)=> {
             divEl.appendChild(typeEl);
         });
         window.alert("Transaction Saved!");
+        titleEl.value = "";
+        amountEl.value = "";
+        typeEl.value = "";
     } 
     catch(error) {
             console.error('Error:', error);
